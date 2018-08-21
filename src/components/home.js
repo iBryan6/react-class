@@ -7,7 +7,7 @@ class Home extends Component{
             <div style ={{width: '100%', margin:'auto'}}>
             {/* HERO */}
             <Grid className="home-banner center" style={{color: '#fff', height: '600px', background: 'url(https://images7.alphacoders.com/703/703654.jpg) center'}} >
-                <Cell col={12} style={{background: 'rgba(0,0,0,0.3)'}}><div className="BannerText"><h1>Bolivian Tours Company</h1><Button raised colored ripple>Learn More</Button></div></Cell>
+                <Cell col={12} style={{background: 'rgba(0,0,0,0.3)'}}><div className="BannerText"><h1>Bolivian Tours Company</h1><Button raised colored ripple className="primary-color">Learn More</Button></div></Cell>
             </Grid>
 
                 {/* MAIN BODY */}
