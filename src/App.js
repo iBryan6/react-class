@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import {Layout, Header, HeaderRow, Navigation, Drawer, Content, Footer,FooterDropDownSection, FooterLinkList, FooterSection} from 'react-mdl'
 import { Link } from 'react-router-dom'
-import Main from './components/mainrouter'
 import './App.css'
+import { Switch, Route} from 'react-router-dom'
+import Home from './components/home'
+import WhyUs from './components/whyus'
+import ContactUs from './components/contactus'
+import Tours from './components/tours'
+import Reservations from './components/reservations'
 
 class App extends Component {
     YearNow() {
-        const year = new Date().getFullYear();
+        const year = new Date().getFullYear()
         return year
     }
 
@@ -28,7 +33,7 @@ class App extends Component {
   render() {
     /*Set Variables from states*/
     const year = this.YearNow()
-    /* const {posts} = this.state */
+    let posts = this.state.posts
 
     /*Content*/
     return (
@@ -62,8 +67,14 @@ class App extends Component {
                   </Navigation>
               </Drawer>
               <Content>
-                  <div className="page-content" />
-                  <Main/>
+                <div className="page-content" />
+                <Switch>
+                    <Route exact path ="/" component={Home}/>
+                    <Route path ="/why-us" component={WhyUs}/>
+                    <Route path ="/contact-us" component={ContactUs}/>
+                    <Route path ="/tours" render = {props => <Tours {...props} tours123456={posts}/>}/>
+                    <Route path ="/reservations" component={Reservations}/>
+                </Switch>
                   <Footer size="mega">
                     <FooterSection type="middle">
                         <FooterDropDownSection title="AvenTOUR">
@@ -104,8 +115,7 @@ class App extends Component {
                         </FooterLinkList>
                     </FooterSection>
                 </Footer>
-              </Content>
-              
+              </Content>              
           </Layout>
       </div>
     );
