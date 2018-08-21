@@ -27,3 +27,6 @@ h2{
 .primary-color{
     background-color: #FF0000 !important;
 }
+.linkTours{
+text-decoration: none;
+}

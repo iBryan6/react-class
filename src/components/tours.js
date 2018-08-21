@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Grid, Cell, Card, CardActions,CardTitle, CardText, Button} from 'react-mdl'
+import {Link} from 'react-router-dom'
 
 class Tours extends Component{
     render(){
@@ -11,19 +12,18 @@ class Tours extends Component{
                 </Grid>
 
                 {/* MAIN BODY */}
-                <div className="mainbody">
-                
-                <Grid className="Summary" style={{width: '80%', margin: 'auto'}} >
-                {this.props.tours123456.map(posts => 
-                    <Card shadow={0} style={{width: '320px', height: '320px', margin: 'auto'}} key={posts.id}>
-                        <CardTitle expand style={{color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'}}>Update</CardTitle>
-                        <CardText></CardText>
-                        <CardActions border>
-                            <Button colored>View Updates</Button>
-                        </CardActions>
-                    </Card>
-                )}
-                </Grid>                    
+                <div className="mainbody">                
+                    <Grid className="Summary" style={{width: '80%', margin: 'auto'}} >
+                    {this.props.tours123456.map(posts =>
+                    <Link to="/" className="linkTours"> 
+                        <Card shadow={0} style={{width: '400px', height: '400px', margin: '5px'}} key={posts.id}>
+                            <CardTitle expand style={{color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #F7A509'}}>{posts.title}</CardTitle>
+                            <CardText><i class="far fa-calendar-alt"></i> DURATION: 12 DAYS<br/><br/><i class="fas fa-hotel"></i> HOTEL - <i class="fas fa-shuttle-van"></i> TRANSPORT - <i class="fas fa-utensils"></i> FOOD & DRINKS</CardText>
+                            <CardActions border>
+                                <Button colored>View More</Button>
+                            </CardActions>
+                        </Card></Link>)}
+                    </Grid>                    
                 </div>
             </div>
         )
