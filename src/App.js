@@ -38,7 +38,7 @@ class App extends Component {
                   <HeaderRow title="AvenTOUR">
                     <Navigation>
                           <a href="tel:3177594940"><img src ="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png" alt="USA flag" width="20px"/> +1-305-296-1800</a>
-                          <a href="tel:3177594940"><img src ="https://cdn.countryflags.com/thumbs/bolivia/flag-round-250.png" alt="USA flag" width="20px"/> +591-769-53543</a>
+                          <a href="tel:3177594940"><img src ="https://cdn.countryflags.com/thumbs/bolivia/flag-round-250.png" alt="Bolivia flag" width="20px"/> +591-769-53543</a>
                           <a href="mailto:example@email.com"><i className="material-icons">mail_outline</i> dennis_Bryan@hotmail.com</a>
                     </Navigation>
                   </HeaderRow>
@@ -77,7 +77,6 @@ class App extends Component {
                         <FooterDropDownSection title="Technology">
                             <FooterLinkList>
                                 <a href="/">How it works</a>
-                                <a href="/">Patterns</a>
                                 <a href="/">Usage</a>
                                 <a href="/">Products</a>
                                 <a href="/">Contracts</a>
@@ -87,15 +86,15 @@ class App extends Component {
                             <FooterLinkList>
                                 <a href="/">Questions</a>
                                 <a href="/">Answers</a>
-                                <a href="/">Contact Us</a>
                             </FooterLinkList>
                         </FooterDropDownSection>
-                        <FooterDropDownSection title="Social Links">
-                            <FooterLinkList>
-                                <a href="/">Facebook</a>
-                                <a href="/">Youtube</a>
-                                <a href="/">Twitter</a>
-                            </FooterLinkList>
+                        <FooterDropDownSection title="Contact Us">
+                            <ul className="sociallinksfooter">
+                                <a href="/"><i className="fab fa-whatsapp fa-2x" style={{color:"#34AF23"}}></i></a>
+                                <a href="/"><i className="fab fa-facebook fa-2x" style={{color:"#4F64B1"}}></i></a>
+                                <a href="/"><i className="fab fa-youtube fa-2x" style={{color:"#FF0000"}}></i></a>
+                                <a href="/"><i className="fab fa-twitter fa-2x" style={{color:"#4B9DF2"}}></i></a>
+                            </ul>
                         </FooterDropDownSection>
                     </FooterSection>
                     <FooterSection type="bottom" logo={"© AvenTOUR "+year+". All rights reserved."}>
