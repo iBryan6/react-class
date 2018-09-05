@@ -72,7 +72,7 @@ class App extends Component {
                     <Route exact path ="/" component={Home}/>
                     <Route path ="/why-us" component={WhyUs}/>
                     <Route path ="/contact-us" component={ContactUs}/>
-                    <Route path ="/tours" render = {props => <Tours {...props} tours123456={posts}/>}/>
+                    <Route path ="/tours" render = {props => <Tours {...props} tours={posts}/>}/>
                     <Route path ="/reservations" component={Reservations}/>
                 </Switch>
                   <Footer size="mega">

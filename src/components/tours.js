@@ -14,7 +14,7 @@ class Tours extends Component{
                 {/* MAIN BODY */}
                 <div className="mainbody">                
                     <Grid className="Summary" style={{width: '100%', margin: 'auto'}} >
-                    {this.props.tours123456.map(posts =>
+                    {this.props.tours.map(posts =>
                     <Link to="/" className="linkTours" key={posts.id}> 
                         <Card shadow={0} style={{width: '400px', height: '400px', margin: '5px'}} >
                             <CardTitle expand style={{color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #F7A509'}}>{posts.title}</CardTitle>
